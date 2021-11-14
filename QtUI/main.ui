@@ -1,0 +1,2124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>240</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>480</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Sarasa Fixed SC</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Client</string>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>480</width>
+     <height>610</height>
+    </size>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>462</width>
+      <height>606</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sarasa Fixed SC</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>设备</string>
+     </attribute>
+     <widget class="QGroupBox" name="device_info">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>10</y>
+        <width>430</width>
+        <height>126</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>填写信息用于连接设备</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="title">
+       <string>设备信息</string>
+      </property>
+      <widget class="QLineEdit" name="vendor_id">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>26</y>
+         <width>112</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>保持默认即可</string>
+       </property>
+       <property name="text">
+        <string>0x2b86</string>
+       </property>
+       <property name="maxLength">
+        <number>6</number>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vendor_id_text">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>26</y>
+         <width>78</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>USB idVendor</string>
+       </property>
+       <property name="text">
+        <string>vendor_id: </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vendor_page_text">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>56</y>
+         <width>100</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>HID Report Descriptor -&gt; Usage Page (Vendor-Defined)</string>
+       </property>
+       <property name="text">
+        <string>vendor_page: </string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="vendor_page">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>56</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>保持默认即可</string>
+       </property>
+       <property name="text">
+        <string>0xffb1</string>
+       </property>
+       <property name="maxLength">
+        <number>6</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="usage_id_text">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>86</y>
+         <width>78</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>HID Report Descriptor -&gt; Usage Page (Vendor-Defined) -&gt; Report ID</string>
+       </property>
+       <property name="text">
+        <string>usage_id: </string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="usage_id">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>86</y>
+         <width>112</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>保持默认即可</string>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+       <property name="maxLength">
+        <number>6</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ping">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>86</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>延迟测试（仅供参考）</string>
+       </property>
+       <property name="text">
+        <string>Ping</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="reset">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>50</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>复位设备</string>
+       </property>
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="reload">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>16</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>重载配置</string>
+       </property>
+       <property name="text">
+        <string>Reload</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="keyboard_mode">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>146</y>
+        <width>430</width>
+        <height>183</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>预设模式</string>
+      </property>
+      <widget class="QRadioButton" name="keyboard_mode_1">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>26</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>自定义</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_2">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>56</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=上一曲 K2=暂停 K3=下一曲</string>
+       </property>
+       <property name="text">
+        <string>歌曲切换</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_3">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>86</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=Esc K2=Z K3=X</string>
+       </property>
+       <property name="text">
+        <string>OSU模式1</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_4">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>116</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=上滑 K2=Ctrl+Tab K3=下滑</string>
+       </property>
+       <property name="text">
+        <string>触摸手势</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_5">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>146</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=左移 K2=点击 K3=右移</string>
+       </property>
+       <property name="text">
+        <string>鼠标滚动</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_6">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>26</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>视频控制</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_7">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>56</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>音量调节</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_8">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>86</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=自动轮盘 K2=Z K3=X</string>
+       </property>
+       <property name="text">
+        <string>OSU模式2</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_9">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>116</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=顺时针 K2=摁下 K3=逆时针</string>
+       </property>
+       <property name="text">
+        <string>模拟Dial</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_10">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>146</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=复制 K2=粘贴 K3=剪切</string>
+       </property>
+       <property name="text">
+        <string>创作者模式1</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_11">
+       <property name="geometry">
+        <rect>
+         <x>261</x>
+         <y>26</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>K1=复制 K2=粘贴 K3=全选</string>
+       </property>
+       <property name="text">
+        <string>创作者模式2</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_12">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>261</x>
+         <y>56</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>触摸滑动</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_13">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>261</x>
+         <y>86</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>其他</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_14">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>261</x>
+         <y>116</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>其他</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="keyboard_mode_15">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>261</x>
+         <y>146</y>
+         <width>130</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>其他</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="mian_button_w">
+      <property name="geometry">
+       <rect>
+        <x>346</x>
+        <y>540</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>写入</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="mian_button_r">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>540</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>读取</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="keyboard_func">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>430</width>
+        <height>190</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>功能</string>
+      </property>
+      <widget class="QCheckBox" name="rgb_func">
+       <property name="geometry">
+        <rect>
+         <x>16</x>
+         <y>30</y>
+         <width>111</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>灯光总开关</string>
+       </property>
+       <property name="text">
+        <string>启用RGB</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="keyboard_scanSP_text">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>60</y>
+         <width>130</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>按键扫描间隔过短可能导致连击</string>
+       </property>
+       <property name="text">
+        <string>按键扫描间隔:</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="keyboard_scanSP">
+       <property name="geometry">
+        <rect>
+         <x>126</x>
+         <y>60</y>
+         <width>60</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>按键扫描间隔过短可能导致连击</string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="value">
+        <number>10</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="keyboard_LP">
+       <property name="geometry">
+        <rect>
+         <x>126</x>
+         <y>90</y>
+         <width>60</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>10000</number>
+       </property>
+       <property name="singleStep">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>1000</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="keyboard_LP_text">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>92</y>
+         <width>129</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>长按识别间隔:</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="resolution_Y">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>121</y>
+         <width>60</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>用于设置触摸屏</string>
+       </property>
+       <property name="minimum">
+        <number>50</number>
+       </property>
+       <property name="maximum">
+        <number>4000</number>
+       </property>
+       <property name="value">
+        <number>1080</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="get_resolution">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>150</y>
+         <width>120</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>尝试获取屏幕分辨率</string>
+       </property>
+       <property name="text">
+        <string>获取屏幕分辨率</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>167</x>
+         <y>121</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>用于设置触摸屏</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>121</y>
+         <width>91</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>用于设置触摸屏</string>
+       </property>
+       <property name="text">
+        <string>屏幕分辨率: </string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="resolution_X">
+       <property name="geometry">
+        <rect>
+         <x>101</x>
+         <y>121</y>
+         <width>60</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>用于设置触摸屏</string>
+       </property>
+       <property name="minimum">
+        <number>50</number>
+       </property>
+       <property name="maximum">
+        <number>4000</number>
+       </property>
+       <property name="value">
+        <number>1920</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>192</x>
+         <y>58</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>按键扫描间隔过短可能导致连击</string>
+       </property>
+       <property name="text">
+        <string>ms</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>192</x>
+         <y>88</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>ms</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>按键</string>
+     </attribute>
+     <widget class="QGroupBox" name="key_func_1_label">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>14</y>
+        <width>430</width>
+        <height>130</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="k1_button">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>24</y>
+         <width>80</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>点亮该键位</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="k1_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>26</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QKeySequenceEdit" name="k1_keySequenceEdit">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>180</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="keySequence">
+        <string>Meta+Ctrl+Alt+Shift+F</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="expand_button">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>126</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left;</string>
+       </property>
+       <property name="text">
+        <string>鼠标设置 ...</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="k1_comboBox_second">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="k1_button_attribute">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>264</x>
+         <y>25</y>
+         <width>60</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+      <zorder>k1_comboBox_second</zorder>
+      <zorder>expand_button</zorder>
+      <zorder>k1_button</zorder>
+      <zorder>k1_comboBox</zorder>
+      <zorder>k1_keySequenceEdit</zorder>
+      <zorder>k1_button_attribute</zorder>
+     </widget>
+     <widget class="QGroupBox" name="key_func_2_label">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>156</y>
+        <width>430</width>
+        <height>130</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="k2_button">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>24</y>
+         <width>80</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>点亮该键位</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="k2_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>26</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QKeySequenceEdit" name="k2_keySequenceEdit">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>180</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="keySequence">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="expand_button_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>126</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left;</string>
+       </property>
+       <property name="text">
+        <string>鼠标设置 ...</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="k2_comboBox_second">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="k2_button_attribute">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>264</x>
+         <y>25</y>
+         <width>60</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+      <zorder>k2_comboBox_second</zorder>
+      <zorder>expand_button_2</zorder>
+      <zorder>k2_button</zorder>
+      <zorder>k2_comboBox</zorder>
+      <zorder>k2_keySequenceEdit</zorder>
+      <zorder>k2_button_attribute</zorder>
+     </widget>
+     <widget class="QGroupBox" name="key_func_3_label">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>300</y>
+        <width>430</width>
+        <height>130</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="k3_button">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>24</y>
+         <width>80</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>点亮该键位</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="k3_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>26</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QKeySequenceEdit" name="k3_keySequenceEdit">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>180</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="keySequence">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="expand_button_3">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>126</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">text-align: left;</string>
+       </property>
+       <property name="text">
+        <string>鼠标设置 ...</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="k3_comboBox_second">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>70</y>
+         <width>126</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="k3_button_attribute">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>264</x>
+         <y>25</y>
+         <width>60</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+      <zorder>k3_comboBox_second</zorder>
+      <zorder>expand_button_3</zorder>
+      <zorder>k3_button</zorder>
+      <zorder>k3_comboBox</zorder>
+      <zorder>k3_keySequenceEdit</zorder>
+      <zorder>k3_button_attribute</zorder>
+     </widget>
+     <widget class="QPushButton" name="key_w_button">
+      <property name="geometry">
+       <rect>
+        <x>346</x>
+        <y>440</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>写入</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="key_r_button">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>440</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>读取</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>RGB</string>
+     </attribute>
+     <widget class="QPushButton" name="rgb_w">
+      <property name="geometry">
+       <rect>
+        <x>342</x>
+        <y>356</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>写入</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rgb_r">
+      <property name="geometry">
+       <rect>
+        <x>236</x>
+        <y>356</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>读取</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="rgb_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>356</y>
+        <width>110</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>当前使用的灯光组</string>
+      </property>
+      <property name="currentText">
+       <string>灯光组 1</string>
+      </property>
+      <property name="maxCount">
+       <number>100</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>灯光组 1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>灯光组 2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>灯光组 3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>灯光组 4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>灯光组 5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>灯光组 6</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QGroupBox" name="colorset_info_1">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>10</y>
+        <width>210</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>灯光组 1</string>
+      </property>
+      <widget class="QToolButton" name="colorset_1_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_1_2">
+       <property name="geometry">
+        <rect>
+         <x>74</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_1_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="colorset_info_2">
+      <property name="geometry">
+       <rect>
+        <x>232</x>
+        <y>10</y>
+        <width>210</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>灯光组 2</string>
+      </property>
+      <widget class="QToolButton" name="colorset_2_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_2_2">
+       <property name="geometry">
+        <rect>
+         <x>74</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_2_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="colorset_info_3">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>124</y>
+        <width>210</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>灯光组 3</string>
+      </property>
+      <widget class="QToolButton" name="colorset_3_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_3_2">
+       <property name="geometry">
+        <rect>
+         <x>74</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_3_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="colorset_info_4">
+      <property name="geometry">
+       <rect>
+        <x>232</x>
+        <y>124</y>
+        <width>210</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>灯光组 4</string>
+      </property>
+      <widget class="QToolButton" name="colorset_4_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_4_2">
+       <property name="geometry">
+        <rect>
+         <x>74</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_4_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="colorset_info_5">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>236</y>
+        <width>210</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>灯光组 5</string>
+      </property>
+      <widget class="QToolButton" name="colorset_5_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_5_2">
+       <property name="geometry">
+        <rect>
+         <x>74</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_5_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="colorset_info_6">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>236</y>
+        <width>210</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>灯光组 6</string>
+      </property>
+      <widget class="QToolButton" name="colorset_6_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_6_2">
+       <property name="geometry">
+        <rect>
+         <x>74</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="colorset_6_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>60</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="rgb_reset">
+      <property name="geometry">
+       <rect>
+        <x>196</x>
+        <y>356</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>重置全部灯光组</string>
+      </property>
+      <property name="text">
+       <string>⟳</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>RAW</string>
+     </attribute>
+     <widget class="QTextEdit" name="raw_data">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>30</y>
+        <width>430</width>
+        <height>130</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>以空格分隔，单字节最大255，仅支持16进制（可不写0x）</string>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string/>
+      </property>
+      <property name="markdown">
+       <string>`0x04 0x06 0x03 0xE8 0x02 0x92 0x01`
+
+</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sarasa Fixed SC','Sarasa Fixed SC'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New';&quot;&gt;0x04 0x06 0x03 0xE8 0x02 0x92 0x01&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="raw_send_button">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>540</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>写入 1</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_send">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>8</y>
+        <width>68</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>发送 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_reply">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>332</y>
+        <width>68</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>接收</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="raw_data_2">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>192</y>
+        <width>430</width>
+        <height>130</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>以空格分隔，单字节最大255，仅支持16进制（可不写0x）</string>
+      </property>
+      <property name="whatsThis">
+       <string/>
+      </property>
+      <property name="markdown">
+       <string>`0x04 0x06 0x03 0xE8 0x02 0x00 0x00`
+
+</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sarasa Fixed SC','Sarasa Fixed SC'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New';&quot;&gt;0x04 0x06 0x03 0xE8 0x02 0x00 0x00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_send_2">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>170</y>
+        <width>68</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>发送 2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="raw_send_button_2">
+      <property name="geometry">
+       <rect>
+        <x>346</x>
+        <y>540</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>写入 2</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="raw_reply">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>356</y>
+        <width>430</width>
+        <height>164</height>
+       </rect>
+      </property>
+      <property name="markdown">
+       <string/>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sarasa Fixed SC','Sarasa Fixed SC'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sarasa Fixed SC';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="raw_help_button">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>540</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>?</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>关于</string>
+     </attribute>
+     <widget class="QGroupBox" name="about_groub">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>460</width>
+        <height>180</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(178, 178, 179);
+</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <widget class="QGraphicsView" name="graphicsView">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>128</width>
+         <height>128</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(QtUI/IMG/logo_shadow.png);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="about_label1">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>30</y>
+         <width>246</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;思源黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Keyboard Nano</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="about_label2">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>100</y>
+         <width>246</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 9pt &quot;Microsoft YaHei UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Client for Windows</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="about_label3">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>120</y>
+         <width>246</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 9pt &quot;Microsoft YaHei UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;a href=&quot;https://github.com/jackadminx&quot; style=&quot;color:#ffffff;&quot;&gt;Version 0.0.1a (2021-11-11)&lt;/a&gt;</string>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>vendor_id</tabstop>
+  <tabstop>vendor_page</tabstop>
+  <tabstop>usage_id</tabstop>
+  <tabstop>reset</tabstop>
+  <tabstop>ping</tabstop>
+  <tabstop>keyboard_mode_1</tabstop>
+  <tabstop>keyboard_mode_2</tabstop>
+  <tabstop>keyboard_mode_3</tabstop>
+  <tabstop>keyboard_mode_4</tabstop>
+  <tabstop>keyboard_mode_5</tabstop>
+  <tabstop>rgb_func</tabstop>
+  <tabstop>keyboard_scanSP</tabstop>
+  <tabstop>keyboard_LP</tabstop>
+  <tabstop>resolution_X</tabstop>
+  <tabstop>resolution_Y</tabstop>
+  <tabstop>get_resolution</tabstop>
+  <tabstop>mian_button_r</tabstop>
+  <tabstop>mian_button_w</tabstop>
+  <tabstop>k1_button</tabstop>
+  <tabstop>k2_button</tabstop>
+  <tabstop>k3_button</tabstop>
+  <tabstop>k1_comboBox</tabstop>
+  <tabstop>k2_comboBox</tabstop>
+  <tabstop>k3_comboBox</tabstop>
+  <tabstop>colorset_1_1</tabstop>
+  <tabstop>colorset_1_2</tabstop>
+  <tabstop>colorset_1_3</tabstop>
+  <tabstop>colorset_2_1</tabstop>
+  <tabstop>colorset_2_2</tabstop>
+  <tabstop>colorset_2_3</tabstop>
+  <tabstop>colorset_3_1</tabstop>
+  <tabstop>colorset_3_2</tabstop>
+  <tabstop>colorset_3_3</tabstop>
+  <tabstop>colorset_4_1</tabstop>
+  <tabstop>colorset_4_2</tabstop>
+  <tabstop>colorset_4_3</tabstop>
+  <tabstop>colorset_5_1</tabstop>
+  <tabstop>colorset_5_2</tabstop>
+  <tabstop>colorset_5_3</tabstop>
+  <tabstop>colorset_6_1</tabstop>
+  <tabstop>colorset_6_2</tabstop>
+  <tabstop>colorset_6_3</tabstop>
+  <tabstop>rgb_comboBox</tabstop>
+  <tabstop>rgb_reset</tabstop>
+  <tabstop>rgb_r</tabstop>
+  <tabstop>rgb_w</tabstop>
+  <tabstop>raw_data</tabstop>
+  <tabstop>raw_data_2</tabstop>
+  <tabstop>raw_reply</tabstop>
+  <tabstop>raw_help_button</tabstop>
+  <tabstop>raw_send_button</tabstop>
+  <tabstop>raw_send_button_2</tabstop>
+  <tabstop>expand_button_3</tabstop>
+  <tabstop>k3_comboBox_second</tabstop>
+  <tabstop>k3_button_attribute</tabstop>
+  <tabstop>key_w_button</tabstop>
+  <tabstop>key_r_button</tabstop>
+  <tabstop>k2_keySequenceEdit</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>k1_comboBox_second</tabstop>
+  <tabstop>expand_button</tabstop>
+  <tabstop>expand_button_2</tabstop>
+  <tabstop>k1_button_attribute</tabstop>
+  <tabstop>k2_comboBox_second</tabstop>
+  <tabstop>k3_keySequenceEdit</tabstop>
+  <tabstop>k2_button_attribute</tabstop>
+  <tabstop>k1_keySequenceEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

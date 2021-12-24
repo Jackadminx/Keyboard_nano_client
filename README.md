@@ -2,7 +2,8 @@
 
 Keyboard nano 小键盘配置工具（上位机）
 
-<img src="./IMG/1.png" width="350"/>
+<img src="./IMG/2.png" width="350"/>
+
 
 ## 功能
 

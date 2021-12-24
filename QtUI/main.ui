@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>638</height>
+    <height>640</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -1761,6 +1761,121 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>灯效</string>
+     </attribute>
+     <widget class="QGroupBox" name="led_effect_label_1">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>12</y>
+        <width>430</width>
+        <height>176</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QRadioButton" name="led_effect_radioButton_1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>102</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>关闭</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="led_effect_radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>102</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>按下点亮</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="led_effect_radioButton_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>211</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>按下点亮后变暗（黑白）</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="led_effect_radioButton_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>110</y>
+         <width>211</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>按下点亮后变暗（随机色彩）</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="led_effect_radioButton_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>210</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>按下熄灭</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="led_effect_button_w">
+      <property name="geometry">
+       <rect>
+        <x>344</x>
+        <y>196</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>写入</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="led_effect_button_r">
+      <property name="geometry">
+       <rect>
+        <x>238</x>
+        <y>196</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>读取</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
       <string>RAW</string>
@@ -2019,7 +2134,7 @@ font: 9pt &quot;Microsoft YaHei UI&quot;;</string>
 font: 9pt &quot;Microsoft YaHei UI&quot;;</string>
        </property>
        <property name="text">
-        <string>&lt;a href=&quot;https://github.com/jackadminx&quot; style=&quot;color:#ffffff;&quot;&gt;Version 0.0.1a (2021-11-11)&lt;/a&gt;</string>
+        <string>&lt;a href=&quot;https://github.com/Jackadminx/Keyboard_nano_client&quot; style=&quot;color:#ffffff;&quot;&gt;Version 0.0.2a (2021-12-24)&lt;/a&gt;</string>
        </property>
        <property name="openExternalLinks">
         <bool>true</bool>

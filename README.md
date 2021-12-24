@@ -27,7 +27,7 @@ Keyboard nano 小键盘配置工具（上位机）
 
   - [x] RGB Color Codes 支持
   - [ ] 渐变灯效
-  - [ ] 按动灯效
+  - [X] 按动灯效
 
 - [x] HID数据通信
 
@@ -40,3 +40,8 @@ Python 3.8 + Pyside2
 ## Note
 
 高分屏适配可能存在显示异常的问题，可以通过修改`./Data/config.yaml`中 `AA_EnableHighDpiScaling`的值来开关高分屏适配功能
+
+## 杂项
+
+[pyhidapi](https://github.com/apmorton/pyhidapi)
+

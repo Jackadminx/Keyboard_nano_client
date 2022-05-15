@@ -2556,7 +2556,8 @@ class Stats:
             self.ui.expand_button_2.setEnabled(False)
             self.ui.k2_comboBox_second.setVisible(False)
             self.ui.k2_comboBox_second.setEnabled(False)
-            self.ui.k2_button_attribute.setVisible(False)
+            self.ui.k2_button_attribute.setEnabled(True)
+            self.ui.k2_button_attribute.setVisible(True)
         elif self.ui.k2_comboBox.currentIndex() == 1:
             self.ui.k2_keySequenceEdit.setEnabled(False)
             self.ui.k2_keySequenceEdit.setVisible(False)
@@ -2568,6 +2569,7 @@ class Stats:
             self.ui.k2_comboBox_second.setVisible(True)
             self.ui.k2_comboBox_second.setEnabled(True)
             self.ui.expand_button_2.setVisible(False)
+            self.ui.k2_button_attribute.setVisible(False)
         elif self.ui.k2_comboBox.currentIndex() == 2:
             self.ui.k2_keySequenceEdit.setVisible(False)
             self.ui.k2_comboBox_second.setVisible(False)
@@ -2607,7 +2609,8 @@ class Stats:
             self.ui.expand_button_3.setEnabled(False)
             self.ui.k3_comboBox_second.setVisible(False)
             self.ui.k3_comboBox_second.setEnabled(False)
-            self.ui.k3_button_attribute.setVisible(False)
+            self.ui.k3_button_attribute.setEnabled(True)
+            self.ui.k3_button_attribute.setVisible(True)
         elif self.ui.k3_comboBox.currentIndex() == 1:
             self.ui.k3_keySequenceEdit.setEnabled(False)
             self.ui.k3_keySequenceEdit.setVisible(False)
@@ -2617,6 +2620,7 @@ class Stats:
             self.ui.expand_button_3.setVisible(False)
             self.ui.k3_comboBox_second.setVisible(True)
             self.ui.k3_comboBox_second.setEnabled(True)
+            self.ui.k3_button_attribute.setVisible(False)
         elif self.ui.k3_comboBox.currentIndex() == 2:
             self.ui.k3_keySequenceEdit.setVisible(False)
             self.ui.k3_comboBox_second.setVisible(False)

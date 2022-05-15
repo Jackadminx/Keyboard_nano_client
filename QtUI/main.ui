@@ -2134,7 +2134,7 @@ font: 9pt &quot;Microsoft YaHei UI&quot;;</string>
 font: 9pt &quot;Microsoft YaHei UI&quot;;</string>
        </property>
        <property name="text">
-        <string>&lt;a href=&quot;https://github.com/Jackadminx/Keyboard_nano_client&quot; style=&quot;color:#ffffff;&quot;&gt;Version 0.0.2a (2021-12-24)&lt;/a&gt;</string>
+        <string>&lt;a href=&quot;https://github.com/Jackadminx/Keyboard_nano_client&quot; style=&quot;color:#ffffff;&quot;&gt;Version 0.0.3a (2022-05-16)&lt;/a&gt;</string>
        </property>
        <property name="openExternalLinks">
         <bool>true</bool>
